@@ -82,8 +82,14 @@ Button to make the prediction.
 
 Display of the prediction and the entered data.
 
-# Repository Structure: OriumX
-orium-x/
+# Repository:
+Orium-X
+
+## Description Repository:
+This project aims to predict the Urban Heat Island Index (UHI) using meteorological and environmental data.
+
+### Repository Structure:
+Orium-X/
 │
 ├── data/                       # Folder to store data
 │ ├── raw/                      # Raw (unprocessed) data
