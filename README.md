@@ -1,4 +1,4 @@
-# OriumX:
+# CemillaX:
 Urban Heat Island Index (UHI) prediction
 
 # Project Description:
@@ -83,13 +83,13 @@ Button to make the prediction.
 Display of the prediction and the entered data.
 
 # Repository:
-Orium-X
+CemillaX
 
 ## Description Repository:
 This project aims to predict the Urban Heat Island Index (UHI) using meteorological and environmental data.
 
 ### Repository Structure:
-Orium-X/
+CemillaX/
 │
 ├── data/                       # Folder to store data
 │ ├── raw/                      # Raw (unprocessed) data
@@ -142,7 +142,7 @@ Stores the processed data (e.g. the NY_Mesonet_Weather_Processed.xlsx file).
 External data that is not part of the main dataset (optional).
 
 ## 2. models/
-Stores the trained models (e.g. Oriumx_uhi_prediction_model.pkl).
+Stores the trained models (e.g. cemillax_uhi_prediction_model.pkl).
 
 ## 3. notebooks/
 Contains the Jupyter or Google Colab notebooks used to explore data, train models, and evaluate results.
