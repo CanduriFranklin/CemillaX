@@ -3,7 +3,7 @@ import pandas as pd
 import joblib
 
 # Cargar el modelo entrenado
-model = joblib.load('models/uhi_prediction_model.pkl')
+model = joblib.load('models/cemillax_uhi_prediction_model.pkl')
 
 # Interfaz de usuario
 st.title('Predicción de UHI')
