@@ -18,8 +18,9 @@ def evaluate_model(model_file, data_file):
     mse = mean_squared_error(y_test, y_pred)
     r2 = r2_score(y_test, y_pred)
 
-    print(f'MSE: {mse}')
-    print(f'R²: {r2}')
+    return mse, r2
 
 if __name__ == "__main__":
-    evaluate_model('models/uhi_prediction_model.pkl', 'data/processed/NY_Mesonet_Weather_Processed.xlsx')
+    mse, r2 = evaluate_model('models/uhi_prediction_model.pkl', 'data/processed/NY_Mesonet_Weather_Processed.xlsx')
+    print(f'MSE: {mse}')
+    print(f'R²: {r2}')

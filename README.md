@@ -1,10 +1,16 @@
 # CemillaX:
 Urban Heat Island Index (UHI) prediction
 
-# Project Description:
+## Project Overview
 The objective of this project is to develop a predictive model to estimate the Urban Heat
 Island Index (UHI) in urban areas, using meteorological and environmental data.
 Furthermore, the model is designed to identify and highlight key factors that significantly contribute to the development of UHI hotspots.
+
+The goal of the project is to develop a machine learning model to predict heat island hotspots in an urban location. Furthermore, the model should be designed to discern and highlight the key factors that significantly contribute to the development of these hotspots within urban environments.
+
+Participants will be provided with near-surface air temperature data in an index format, which was collected on July 24, 2021 using a ground traverse in the Bronx and Manhattan region of New York City. This dataset constitutes the traverse points (latitude and longitude) and their corresponding UHI (Urban Heat Island) index values. Participants will use this dataset to build a regression model to predict UHI index values ​​for a given set of locations.
+
+It is important to understand that the UHI Index at any given location is indicative of the relative temperature difference at that specific point compared to the average temperature of the city. This index serves as a crucial metric for assessing heat intensity within different urban areas.
 
 # Data Used / Data Source:
 ## Meteorological Data: 
