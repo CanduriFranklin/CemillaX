@@ -2,28 +2,28 @@ import streamlit as st
 import pandas as pd
 import joblib
 
-# Cargar el modelo entrenado
+# Load the trained model
 model = joblib.load('models/cemillax_uhi_prediction_model.pkl')
 
-# Interfaz de usuario
-st.title('Predicción de UHI')
+# User interface
+st.title('UHI Prediction')
 
-# Entradas del usuario
-temp_bronx = st.number_input('Temperatura en el Bronx (°C)')
-humidity_bronx = st.number_input('Humedad en el Bronx (%)')
-wind_speed_bronx = st.number_input('Velocidad del viento en el Bronx (m/s)')
-wind_direction_bronx = st.number_input('Dirección del viento en el Bronx (grados)')
-solar_flux_bronx = st.number_input('Flujo solar en el Bronx (W/m^2)')
-temp_manhattan = st.number_input('Temperatura en Manhattan (°C)')
-humidity_manhattan = st.number_input('Humedad en Manhattan (%)')
-wind_speed_manhattan = st.number_input('Velocidad del viento en Manhattan (m/s)')
-wind_direction_manhattan = st.number_input('Dirección del viento en Manhattan (grados)')
-solar_flux_manhattan = st.number_input('Flujo solar en Manhattan (W/m^2)')
-heat_index_bronx = st.number_input('Índice de calor en el Bronx')
-heat_index_manhattan = st.number_input('Índice de calor en Manhattan')
-# (Añade más entradas según sea necesario)
+# User inputs
+temp_bronx = st.number_input('Temperature in the Bronx (°C)')
+humidity_bronx = st.number_input('Humidity in the Bronx (%)')
+wind_speed_bronx = st.number_input('Wind speed in the Bronx (m/s)')
+wind_direction_bronx = st.number_input('Wind direction in the Bronx (degrees)')
+solar_flux_bronx = st.number_input('Solar flux in the Bronx (W/m^2)')
+temp_manhattan = st.number_input('Temperature in Manhattan (°C)')
+humidity_manhattan = st.number_input('Humidity in Manhattan (%)')
+wind_speed_manhattan = st.number_input('Wind speed in Manhattan (m/s)')
+wind_direction_manhattan = st.number_input('Wind direction in Manhattan (degrees)')
+solar_flux_manhattan = st.number_input('Solar flux in Manhattan (W/m^2)')
+heat_index_bronx = st.number_input('Heat index in the Bronx')
+heat_index_manhattan = st.number_input('Heat index in Manhattan')
+# (Add more inputs as needed)
 
-# Crear un DataFrame con las entradas
+# Create a DataFrame with the inputs
 input_data = pd.DataFrame({
     'Air Temp at Surface [degC]_bronx': [temp_bronx],
     'Relative Humidity [percent]_bronx': [humidity_bronx],
@@ -37,10 +37,10 @@ input_data = pd.DataFrame({
     'Solar Flux [W/m^2]_manhattan': [solar_flux_manhattan],
     'Heat_Index_bronx': [heat_index_bronx],
     'Heat_Index_manhattan': [heat_index_manhattan],
-    # (Añade más columnas según sea necesario)
+    # (Add more columns as needed)
 })
 
-# Hacer la predicción
-if st.button('Predecir UHI'):
+# Make the prediction
+if st.button('Predict UHI'):
     prediction = model.predict(input_data)
-    st.write(f'Predicción de UHI: {prediction[0]}')
+    st.write(f'UHI Prediction: {prediction[0]}')
